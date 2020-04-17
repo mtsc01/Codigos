@@ -1,11 +1,12 @@
 Sub nomeCurso()
     
     Dim ultimalinha As Integer
-    Dim x As Range
+    Dim plan As Worksheet
+    Dim x, celula As range
     
     ultimalinha = Cells(Rows.Count, 1).End(xlUp).Row
     
-    For Each celula In Plan9.Range("a2:a" & ultimalinha)
+    For Each celula In Plan9.range("a2:a" & ultimalinha)
         For Each plan In Worksheets
             Set x = plan.Cells.Find(celula.Value)
             If Not x Is Nothing Then
